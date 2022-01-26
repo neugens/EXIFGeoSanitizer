@@ -1,0 +1,10 @@
+// Change as appropriate and then use it as an Apple Script or via Automator as a service
+tell application "Finder"
+	set jpegImageFile to selection
+	repeat with fileToSantize in jpegImageFile
+		set fileToSantize to fileToSantize as alias
+		set f to POSIX path of fileToSantize
+		set theFile to (quoted form of (f as string))
+		do shell script "PATH/TO/EXIFGeoSanitizer.sh " & theFile
+	end repeat
+end tell
