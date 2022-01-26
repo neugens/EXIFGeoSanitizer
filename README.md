@@ -1,5 +1,5 @@
 # EXIFGeoSanitizer
-Simple tools to remove Geo data from images
+Simple tool to remove Geo data from images
 
 Compile using maven:
 
